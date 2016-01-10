@@ -17,6 +17,8 @@ $(function() {
 
 */
 
+
+    // Replace this line with the one on your Quickstart Guide Page
 Parse.initialize("3EN5mKJCAL35QX33H9OOQdGpDBDBCpnft97FLSy4", "XOdC0vj4xQmkMEWrrzW9y9fTlVEfUNnCGquQpgmF");
 
 

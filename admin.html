@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,11 +21,11 @@
   </head>
   <body>
 
-  	    <div class="blog-masthead">
+  	<div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="index.html">Home</a>
-          <a class="blog-nav-item" href="admin.html">Admin</a>
+          <a class="blog-nav-item" href="index.html">Home</a>
+          <a class="blog-nav-item active" href="admin.html">Admin</a>
         </nav>
       </div>
     </div>
@@ -39,20 +40,10 @@
       <div class="row">
 
         <div class="col-sm-8 blog-main">
-
-          <div class="main-container">
-            
-          </div>
-
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
-
-        </div><!-- /.blog-main -->
-
+          <div class="main-container"></div>
+        </div>
+        
+        <!-- begin sidebar -->
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
@@ -96,15 +87,20 @@
       </p>
     </footer>
 
-    <script id="blogs-tpl" type="text/x-handlebars-template">
-      {{#each blog}}
-      <div class="blog-post">
-          <h2 class="blog-post-title"><a href="#">{{title}}</a></h2>
-          <p class="blog-post-meta">At time by an author</p>
-          <div>{{{content}}}</div>
-      </div>
-      {{/each}}
+    <script id="login-tpl" type="text/x-handlebars-template">
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
     </script>
+ 
+    <script id="welcome-tpl" type="text/x-handlebars-template">
+        <h2>Welcome, {{username}}!</h2>
+    </script>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -114,6 +110,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/blog.js"></script>
+    <script src="js/admin.js"></script>
   </body>
 </html
+
+
+
+
+
